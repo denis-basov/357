@@ -1,0 +1,90 @@
+body {
+    background-color: aliceblue;
+    /* background-image: url('images/Cthulhu_rises_from_the_sea.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; */
+}
+
+/* задаем стили для ВСЕХ заголовков h1 настранице */
+/*
+h1 {
+    color: silver;
+    background-color: brown !important;
+}
+
+p {
+    background-color: aliceblue;
+    color: blueviolet;
+}
+
+ul {
+    background-color: bisque;
+}
+*/
+
+/* задание стилей по названию класса */
+.head {
+    background-color: chocolate;
+}
+
+/* задание стилей по названию ID  */
+#head-1 {
+    background-color: darkblue;
+}
+
+.service {
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+/* задаем стили для параграфов, которые находятся внутри элемента с классом service */
+.service p {
+    background-color: rgb(178, 215, 248);
+    color: rgb(205, 101, 27);
+}
+
+.list {
+    background-color: beige;
+    color: darkslateblue;
+    /* border: 2px solid darkslateblue; */
+    /* border: 5px dotted; */
+    /* border: 2px dashed orangered; */
+    /* border-bottom: 2px solid orangered;
+    border-top: 2px solid orangered; */
+    border-left: 15px solid orange;
+    border-radius: 50px;
+}
+
+.test-workers {
+    background-color: #F9CAFD;
+    color: white;
+    border: 2px solid #8821AE;
+    border-radius: 20px;
+}
+
+.workers {
+    background-color: antiquewhite;
+    color: rgb(55, 55, 55);
+    border: 5px solid goldenrod;
+}
+
+/* элемент с классами worker и worker-1 внутри элемента с классом workers */
+.workers .worker.worker-1 {
+    background-color: burlywood;
+    border: 2px solid darkgray;
+}
+
+.workers .worker-3 {
+    background-color: aqua;
+    border: 5px dotted rebeccapurple;
+}
+
+/* стили для элементов с классом worker кот находятся внутри
+элементов с классом workers */
+.workers .worker {
+    border: 3px dashed darkblue;
+    background-color: #ebbdfc;
+    margin: 20px;
+}

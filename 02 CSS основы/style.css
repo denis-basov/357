@@ -75,8 +75,14 @@ ul {
     /* внутренние отступы */
     /* padding: 20px; */
     padding: 15px 30px;
-
     list-style-type: none;
+
+    transition: all 1s;
+}
+
+.list:hover {
+    background-color: rgb(247, 247, 173);
+    border-radius: 30px;
 }
 
 .test-workers {
@@ -146,6 +152,7 @@ ul {
     background-color: rgb(244, 234, 219);
     border-radius: 5px;
     padding: 15px;
+    transition: all 0.5s;
 }
 
 /* стили при наведени на каждого работника*/
@@ -202,7 +209,6 @@ ul {
     left: 250px; */
     right: -10px;
     top: -10px;
-
 }
 
 

@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+html {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(55, 55, 55);
+}
+
 body {
     background-color: aliceblue;
     /* background-image: url('images/Cthulhu_rises_from_the_sea.jpg');
@@ -30,7 +41,7 @@ ul {
 
 /* задание стилей по названию ID  */
 #head-1 {
-    background-color: darkblue;
+    background-color: rgb(7, 7, 232);
 }
 
 .service {
@@ -55,6 +66,17 @@ ul {
     border-top: 2px solid orangered; */
     border-left: 15px solid orange;
     border-radius: 50px;
+
+    /* внешние отступы */
+    /* margin: 25px; */
+    /* margin: 15px 25px 10px 30px; */
+    margin: 20px 40px;
+
+    /* внутренние отступы */
+    /* padding: 20px; */
+    padding: 15px 30px;
+
+    list-style-type: none;
 }
 
 .test-workers {
@@ -62,29 +84,185 @@ ul {
     color: white;
     border: 2px solid #8821AE;
     border-radius: 20px;
+
+    margin: 30px;
+    padding: 20px;
 }
 
-.workers {
+.test-workers .worker {
+    padding: 15px 30px;
+}
+
+/*******************************************************************************************/
+/*************************************** <div class="workers">  ***************************/
+/*******************************************************************************************/
+
+/* .workers {
     background-color: antiquewhite;
     color: rgb(55, 55, 55);
     border: 5px solid goldenrod;
-}
+    margin: 20px 40px;
+    padding: 30px;
+} */
 
 /* элемент с классами worker и worker-1 внутри элемента с классом workers */
-.workers .worker.worker-1 {
+/* .workers .worker.worker-1 {
     background-color: burlywood;
     border: 2px solid darkgray;
-}
+} */
 
-.workers .worker-3 {
+/* .workers .worker.worker-3 {
     background-color: aqua;
     border: 5px dotted rebeccapurple;
-}
+    margin: 0;
+} */
 
 /* стили для элементов с классом worker кот находятся внутри
 элементов с классом workers */
-.workers .worker {
+/* .workers .worker {
     border: 3px dashed darkblue;
     background-color: #ebbdfc;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+} */
+
+
+/* стили для контейнера */
+.workers {
+    background-color: rgb(251, 241, 227);
+    border: 2px solid rgb(253, 236, 212);
+    border-radius: 5px;
+    color: rgb(55, 55, 55);
     margin: 20px;
+    padding: 20px;
+
+    /* компоновка дочерних элементов */
+    display: flex;
+    gap: 20px;
+}
+
+/* стили для каждого работника */
+.workers .worker {
+    background-color: rgb(244, 234, 219);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* стили при наведени на каждого работника*/
+.workers .worker:hover {
+    background-color: rgb(250, 232, 209);
+    box-shadow: 4px 6px 23px -5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* стили для картинок работников */
+.workers .worker img {
+    width: 200px;
+    border-radius: 8px;
+}
+
+.workers .worker h2 {
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.workers .worker h2 span {
+    /* text-decoration: line-through; */
+    text-decoration: underline;
+    color: brown;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.workers .worker p {
+    /* letter-spacing: 1px; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 400;
+}
+
+.workers .worker button {
+    text-transform: uppercase;
+}
+
+/* абсолютное позиционирование */
+.workers .worker.worker-2 {
+    /* контейнер */
+    position: relative;
+}
+
+.workers .worker.worker-2 .intern {
+    /* позиционируемый дочерний элемент */
+    background-color: #b09302;
+    color: rgb(51, 51, 91);
+    padding: 3px 6px;
+    border-radius: 10px;
+
+    position: absolute;
+    /* top: 200px;
+    left: 250px; */
+    right: -10px;
+    top: -10px;
+
+}
+
+
+
+
+
+/*******************************************************************************************/
+/*********************** <a href="#" class="myButton">green</a>  ***************************/
+/*******************************************************************************************/
+.myButton {
+    background-color: #44c767;
+    border-radius: 12px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 19px;
+    padding: 17px 41px;
+    text-decoration: none;
+    text-shadow: -1px 1px 2px #2f6627;
+}
+
+.myButton:hover {
+    background-color: #5cbf2a;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/*******************************************************************************************/
+/*********************** a псевдоклассы *************************************************/
+/*******************************************************************************************/
+/* непосещенная ссылка */
+a:link {
+    display: inline-block;
+    color: orange;
+    background-color: #8821AE;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+/* посещенная ссылка */
+a:visited {
+    color: black;
+    background-color: #b42be6;
+}
+
+/* ссылка при наведении мыши */
+a:hover {
+    background-color: #b0029f;
+    color: blueviolet;
+}
+
+/* ссылка в момент нажатия */
+a:active {
+    background-color: #44c767;
+    text-decoration: none;
 }

@@ -1,0 +1,26 @@
+/* для ширины экрана не более 700п */
+@media(max-width:700px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* для ширины экрана не более 500п */
+@media(max-width:500px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+/* для ширины экрана не более 350п */
+@media(max-width:350px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

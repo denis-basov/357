@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Alata', sans-serif;
+    color: #E8E8E8;
+    font-size: 62.5%;
+    /* 16px - 100% */
+    /* 10px - 62,5%*/
+}
+
+body {
+    background-color: #221A37;
+    background-image: url('images/background_image.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    height: 100vh;
+    padding: 1rem;
+}
+
+header {
+    max-width: 142rem;
+    padding: 6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin: 1.2rem 0;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+header nav {
+    display: flex;
+    padding: 1rem 3.6rem;
+    gap: 3.2rem;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #E8E8E8;
+    text-decoration: none;
+}
+
+header nav button {
+    padding: 0.8rem 3.2rem;
+    border-radius: 26px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: #402166;
+    border: none;
+    color: #FFF;
+}
+
+main {
+    max-width: 142rem;
+    padding: 2rem 12rem;
+    display: grid;
+    grid-template-columns: 50rem;
+    justify-content: end;
+    font-size: 1.6rem;
+    row-gap: 3rem;
+}
+
+main .title .top {
+    color: #5D3974;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+main .title h1 {
+    width: 15rem;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+}
+
+main .title .botom {
+    color: #575757;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

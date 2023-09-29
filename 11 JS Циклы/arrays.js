@@ -4,6 +4,7 @@ let mixed = [true, 1, null, false, "hello", NaN, [1, 2, 3]];
 let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
 let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
 let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
+let votes = ["y", "n", "n", "y", "y","y", "n", "n", "y", "y","y", "n", "n", "y", "y","y", "n", "n", "y", "y","y", "n", "n", "y", "y","y", "n", "n", "y", "y","y", "n", "n", "y", "y","y", "n", "n", "y", "y","y", "n", "n", "y", "y","y", "n", "n", "y", "y"];
 
 let phones = [
   [345, 678, 137, 789, 568, 236],

@@ -232,3 +232,152 @@ let users = [
 //   return cat.owner.city === "Москва" && cat.color === "Серый";
 // });
 // console.log(moscowCats);
+
+/**
+ * reduce
+ */
+// let sum = 0;
+// for (let number of numbers) {
+//   sum += number;
+// }
+// console.log(sum);
+
+/*
+let sum = numbers.reduce(function (acc, number) {
+  // console.log("----------------------");
+  // console.log(`Аккумулятор: ${acc}. Элемент массива: ${number}`);
+  return acc + number;
+});
+console.log(sum);*/
+
+// let sum = numbers.reduce((acc, number) => acc + number);
+// console.log(sum);
+
+// 1 задание
+// let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+// объедините массив в строку с параграфами
+// <p>Киви</p><p>Ананас</p>...
+
+//1
+// let str = fruits.reduce((acc, fruit) => acc + `<p>${fruit}</p>`);
+// console.log(str);
+
+//2
+// let paragraphString = fruits.reduce(function (acc, fruit) {
+//   return acc + "<p>" + fruit + "</p>";
+// }, "");
+
+// console.log(paragraphString);
+
+//3
+// let lovly = fruits.reduce((acc, fruit) => acc + `<p>${fruit}</p>`);
+// console.log(`<p>${lovly}`);
+
+//4
+// console.log(`<p>${fruits.join("</p><p>")}</p>`);
+
+//5
+// let fruitsStr = fruits.reduce((acc, fruit) => "<p>" + acc + "</p>" + fruit);
+// console.log(fruitsStr);
+
+//6
+// let sum = fruits.reduce((acc, fruit) => acc + ", " + fruit);
+// console.log(sum);
+// document.write(sum);
+
+//7
+// let lovly = fruits.reduce((acc, fruit) => acc + `</p><p>${fruit}`);
+// console.log(`<p>${lovly}</p>`);
+
+//8
+// let fruitsStr = fruits.reduce(function (acc, fruit) {
+//   return `${acc}<p>${fruit}</p>`;
+// }, "");
+// let fruitsStr = fruits.reduce((acc, fruit) => `${acc}<p>${fruit}</p>`, "");
+// document.write(fruitsStr);
+// console.log(fruitsStr);
+
+//9
+// let lovly = fruits.reduce((acc, fruit) => acc + `<p>${fruit}</p>`, "");
+// console.log(lovly);
+
+// начальное значение
+// let sum = numbers.reduce(function (acc, number) {
+//   return acc + number;
+// }, 100);
+// console.log(sum);
+
+// список
+// let lovly = fruits.reduce((acc, fruit) => acc + `<li>${fruit}</li>`, "<ul class='fruits'>") + "</ul>";
+// console.log(lovly);
+// document.write(lovly);
+
+// максимальное значение
+// let numbers = [1, 4, 6, 3, 2, 8, 4, 3];
+// let maxNumber = numbers.reduce(function (max, currVal) {
+//   if (currVal > max) {
+//     return currVal;
+//   } else {
+//     return max;
+//   }
+// });
+// console.log(maxNumber);
+
+// получить суммарный возраст всех котов
+// let totalAges = cats.reduce(function (sum, cat) {
+//   return sum + cat.age;
+// }, 0);
+// console.log(totalAges);
+
+// получить строку с именами пользователей
+// let userNames = users
+//   .reduce(function (str, user) {
+//     return str + " " + user.fName;
+//   }, "")
+//   .trim();
+// console.log(userNames);
+
+// посчитать кол-во y и n
+// let result = votes.reduce(
+//   function (resObj, currVal) {
+//     // if (currVal === "y") {
+//     //   resObj.yes++;
+//     // } else {
+//     //   resObj.no++;
+//     // }
+//     currVal === "y" ? resObj.yes++ : resObj.no++;
+//     return resObj;
+//   },
+//   { yes: 0, no: 0 }
+// );
+// console.log(result);
+
+/**
+ * sort
+ */
+// let numbers = [1, 4, 6, 3, 2, 8, 4, 3];
+// 1. a = 1, b = 4; a-b = 1 - 4 = -3
+// 2. a = 4, b = 6; a-b = 4 - 6 = -2
+// 3. a = 6, b = 3; a-b = 6 - 3 = 3
+
+// сортировка по возрастанию
+// numbers.sort(function (a, b) {
+//   return a - b;
+// });
+// console.log(numbers);
+
+// сортировка по убыванию
+// numbers.sort((a, b) => b - a);
+// console.log(numbers);
+
+// сортировка котов по алфавиту
+// cats.sort(function (a, b) {
+//   if (a.name > b.name) {
+//     return -1;
+//   }
+//   if (a.name < b.name) {
+//     return 1;
+//   }
+//   return 0;
+// });
+// console.log(cats);

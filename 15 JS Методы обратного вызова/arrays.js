@@ -1,5 +1,5 @@
 // let users = ["Иван", "Алексей", "Светлана", "Петр", "Алиса", "Неизвестный"];
-let numbers = [1, 4, 6, 3, 2, 8, 4, 3];
+let numbers = [1, 4, 6, 3, 11, 29, 19, 2, 8, 4, 3];
 let mixed = [true, 1, null, false, "hello", NaN, [1, 2, 3]];
 let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
 let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];

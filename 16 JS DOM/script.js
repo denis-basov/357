@@ -106,3 +106,29 @@ pressBtn.addEventListener("click", function () {
 //   par1.style.color = "orange";
 //   console.dir(par1);
 // });
+
+let fruits = ["Киви", "Ананас", "Кокос", "Апельсин", "Банан", "Яблоко"];
+let pets = ["cat", "dog", "bat", "mouse", "pig", "goat", "sheep", "cow", "chicken"];
+let animals = ["ant", "bison", "camel", "duck", "elephant", "cat", "dog"];
+
+/**
+ * q u e r y S e l e c t o r
+ */
+// получение элемента по тегу
+// let animalsEl = document.querySelector("div");
+// console.log(animalsEl);
+
+// let par = document.querySelector("p");
+// console.log(par);
+
+// получение по классу
+// let animalsEl = document.querySelector(".animals");
+// console.log(animalsEl);
+
+// по ID
+// let par1 = document.querySelector("#par-1");
+// console.log(par1);
+
+// выбор по комплексному селектору
+// let firstAnimal = document.querySelector(".animals .animal");
+// console.log(firstAnimal);

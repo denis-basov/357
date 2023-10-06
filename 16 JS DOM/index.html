@@ -4,13 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <button id="press-btn">В корзину</button>
 
     <h1 id="head-1" class="head">Объектная Модель Документа (DOM) – это программный интерфейс (API) для HTML и XML документов.</h1>
 
-    <p id="par-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nihil provident corrupti error nemo cupiditate tempora sequi earum quod molestiae vel totam quisquam saepe explicabo eum distinctio reiciendis, laudantium natus nulla placeat maiores? Qui alias quia provident, animi ducimus dolore.</p>
+    <p id="par-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nihil provident corrupti error nemo cupiditate tempora sequi earum quod molestiae vel totam quisquam saepe explicabo eum distinctio
+      reiciendis, laudantium natus nulla placeat maiores? Qui alias quia provident, animi ducimus dolore.
+    </p>
+
+    <div class="workers">
+      <div class="worker worker-1">
+        <img src="images/user-1.jpg" alt="Иван Иванов" />
+        <h2>Имя: <span>Иван</span></h2>
+        <p>Фамилия: Иванов</p>
+        <p>Возраст: 33 года</p>
+        <button>Подробнее</button>
+      </div>
+      <div class="worker worker-2">
+        <img src="images/user-2.jpg" alt="Сергей Сидоров" />
+        <h2>Имя: <span>Сергей</span></h2>
+        <p>Фамилия: Сидоров</p>
+        <p>Возраст: 37 лет</p>
+        <button>Подробнее</button>
+        <div class="intern">Стажер</div>
+      </div>
+      <div class="worker worker-3">
+        <img src="images/user-3.jpg" alt="Ирина Иванова" />
+        <h2>Имя: <span>Ирина</span></h2>
+        <p>Фамилия: Иванова</p>
+        <p>Возраст: 22 года</p>
+        <button>Подробнее</button>
+      </div>
+    </div>
+
+    <div class="animals">
+      <p class="animal">bison</p>
+      <p class="animal">camel</p>
+      <p class="animal">elephant</p>
+      <p class="animal">cat</p>
+    </div>
 
     <script src="script.js"></script>
   </body>

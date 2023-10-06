@@ -1,0 +1,78 @@
+/* стили для контейнера */
+.workers {
+    background-color: rgb(251, 241, 227);
+    border: 2px solid rgb(253, 236, 212);
+    border-radius: 5px;
+    color: rgb(55, 55, 55);
+    margin: 20px;
+    padding: 20px;
+
+    /* компоновка дочерних элементов */
+    display: flex;
+    gap: 20px;
+}
+
+/* стили для каждого работника */
+.workers .worker {
+    width: 400px;
+    background-color: rgb(244, 234, 219);
+    border-radius: 5px;
+    padding: 15px;
+    transition: all 0.5s;
+}
+
+/* стили при наведени на каждого работника*/
+.workers .worker:hover {
+    background-color: rgb(250, 232, 209);
+    box-shadow: 4px 6px 23px -5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* стили для картинок работников */
+.workers .worker img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.workers .worker h2 {
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.workers .worker h2 span {
+    /* text-decoration: line-through; */
+    text-decoration: underline;
+    color: brown;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.workers .worker p {
+    /* letter-spacing: 1px; */
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 400;
+}
+
+.workers .worker button {
+    text-transform: uppercase;
+}
+
+/* абсолютное позиционирование */
+.workers .worker.worker-2 {
+    /* контейнер */
+    position: relative;
+}
+
+.workers .worker.worker-2 .intern {
+    /* позиционируемый дочерний элемент */
+    background-color: #b09302;
+    color: rgb(51, 51, 91);
+    padding: 3px 6px;
+    border-radius: 10px;
+
+    position: absolute;
+    /* top: 200px;
+    left: 250px; */
+    right: -10px;
+    top: -10px;
+}

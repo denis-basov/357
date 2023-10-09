@@ -264,7 +264,7 @@ usersEl.innerHTML = usersNames;
 // console.log(fNameEl.value);
 
 // получение value имени после ввода клиентом
-let fNameEl = document.querySelector("#fName"); // получаем input
+//let fNameEl = document.querySelector("#fName"); // получаем input
 
 // событие активации поля ввода - focus
 //fNameEl.addEventListener("focus", function () {
@@ -272,20 +272,20 @@ let fNameEl = document.querySelector("#fName"); // получаем input
 // });
 
 // событие деактивации поля ввода - blur
-fNameEl.addEventListener("blur", function () {
-  let fNameValue = fNameEl.value;
-  console.log(fNameValue);
-});
+// fNameEl.addEventListener("blur", function () {
+//   let fNameValue = fNameEl.value;
+//   console.log(fNameValue);
+// });
 
 // получение value фамилии после ввода клиентом
-let lNameEl = document.querySelector("#lName");
+//let lNameEl = document.querySelector("#lName");
 
-lNameEl.addEventListener("blur", function () {
-  console.log(lNameEl.value);
-  // если клиент ничего не ввел, то вывести в консоль
-  // инфу об этом
-  // если клиент ввел имя, то вывести его имя в консоль
-});
+//lNameEl.addEventListener("blur", function () {
+//console.log(lNameEl.value);
+// если клиент ничего не ввел, то вывести в консоль
+// инфу об этом
+// если клиент ввел имя, то вывести его имя в консоль
+//});
 
 /**
  * parentElement - родительский элемент
@@ -391,3 +391,314 @@ lNameEl.addEventListener("blur", function () {
 //   animalsEl.style.display = "none";
 //   // animalsBtn.style.display = "none";
 // });
+
+/*
+//Задание 1. Есть объект:
+const account = {
+  owner: "Silvestr Stallone",
+  movements: [200, -200, 340, -300, -20, 50, 400, -460],
+  interestRate: 99,
+  pin: 9999,
+};
+console.log(account);
+// С помощью методов DOM создайте разметку, стили. Разместите в разметке данные из объекта
+// и поместите на страницу.
+
+// 1 создаем разметку
+let accountStr = `<div class="account">
+                    <h2>${account.owner}</h2>
+                    <p>Движения по счету: ${account.movements.join(", ")}</p>
+                    <p>Рейтинг: ${account.interestRate}</p>
+                    <p>ПИН: ${account.pin}</p>
+                  </div>`;
+// 2 получаем элемент для вставки
+let accountsEl = document.querySelector("#accounts");
+// 3 вставка сформированной строки в полученный элемент
+accountsEl.innerHTML = accountStr;
+
+// 4 получаем только что вставленный элемент
+let accountEl = accountsEl.children[0];
+// 5 задаем стили
+accountEl.style.color = "red";
+accountEl.style.background = "blue";
+accountEl.style.border = "3px dotted orange";
+
+console.log(accountEl);
+*/
+
+/**
+ * classList
+ */
+// let worker2 = document.querySelector(".workers .worker-2");
+// console.log(worker2.classList);
+
+// работа с классами элемента
+let userEl = document.querySelector("#user"); // получаем элемент пользователя
+let showUserBtn = document.querySelector("#show-user"); // получаем кнопку
+
+// add() - добавление класса(ов) элементу
+// userEl.classList.add("user", "user-1");
+// console.log(userEl.classList);
+
+// при нажатии на кнопку добавим класс user
+// showUserBtn.addEventListener("click", function () {
+//   userEl.classList.add("user");
+// });
+
+// remove() - удаление классов у элемента
+// при нажатии на кнопку удалим класс user
+// showUserBtn.addEventListener("click", function () {
+//   userEl.classList.remove("user");
+// });
+
+// contains() - проверяет, есть ли класс у элемента
+// console.log(userEl.classList.contains("user"));
+
+/*
+// 1
+// при нажатии на кнопку
+// если класс user у элемента есть, удалить его
+// а если класса user у элемента нет, добавить
+showUserBtn.addEventListener("click", function () {
+  // проверяем, есть ли класс
+  if (userEl.classList.contains("user")) {
+    // если класс есть, удаляем его
+    userEl.classList.remove("user");
+  } else {
+    // если класса нет, добавляем его
+    userEl.classList.add("user");
+  }
+});
+*/
+
+/**
+ * toggle() - добавляет класс, если он отсутствует, и удаляет, если он есть
+ */
+//2
+// showUserBtn.addEventListener("click", function () {
+//   userEl.classList.toggle("user");
+// });
+
+/**
+ * скрытие/показ элемента при нажатии на кнопку
+ */
+// showUserBtn.addEventListener("click", function () {
+//   userEl.classList.toggle("hidden");
+// });
+
+/**
+ * getAttribute() - возвращает значение атрибута
+ */
+// let worker2Img = document.querySelector(".workers .worker-2 img");
+// console.log(worker2Img.getAttribute("alt")); // получаем alt
+// console.log(worker2Img.getAttribute("src"));
+
+/**
+ * setAttribute() - устанавливает значение атрибута
+ */
+// let worker2Img = document.querySelector(".workers .worker-2 img");
+// worker2Img.setAttribute("alt", "Иван Иванов"); // меняем значение alt
+// worker2Img.setAttribute("src", "images/user-1.jpg"); // меняем путь к картинке
+
+/**
+ * при клике на кнопку поменять картинки 1 и 2 работника местами
+ */
+/*
+// 1 получаем элементы для работы
+let changeImgBtn = document.querySelector("#change-img");
+let worker1Img = document.querySelector(".workers .worker-1 img");
+let worker2Img = document.querySelector(".workers .worker-2 img");
+// console.log(changeImgBtn, worker1Img, worker2Img);
+
+// 2 при клике на кнопку
+changeImgBtn.addEventListener("click", function () {
+  // 3 получаем ссылки на картинки
+  let worker1Src = worker1Img.getAttribute("src");
+  let worker2Src = worker2Img.getAttribute("src");
+  console.log(worker1Src, worker2Src);
+
+  // 4 задать значение атрибутов src
+  worker1Img.setAttribute("src", worker2Src); // картинка для первого работника
+  worker2Img.setAttribute("src", worker1Src); // картинка для второго работника
+});
+*/
+
+// 1 задание
+// допишите пример так, чтобы помимо картинок еще менялись и значения атрибутов alt
+
+//1
+/*
+let changeImgBtn = document.querySelector("#change-img");
+let worker1Img = document.querySelector(".workers .worker-1 img");
+let worker2Img = document.querySelector(".workers .worker-2 img");
+
+changeImgBtn.addEventListener("click", function () {
+  // получаем значения атрибутов src
+  let worker1Src = worker1Img.getAttribute("src");
+  let worker2Src = worker2Img.getAttribute("src");
+
+  // получаем значения атрибутов alt
+  let worker1Alt = worker1Img.getAttribute("alt");
+  let worker2Alt = worker2Img.getAttribute("alt");
+  console.log(worker1Alt, worker2Alt);
+
+  // меняем значения атрибутов src
+  worker1Img.setAttribute("src", worker2Src); // картинка для первого работника
+  worker2Img.setAttribute("src", worker1Src); // картинка для второго работника
+
+  // меняем значения атрибутов alt
+  worker1Img.setAttribute("alt", worker2Alt); // alt для первого работника
+  worker2Img.setAttribute("alt", worker1Alt); // alt для второго работника
+});
+*/
+
+//2
+/*
+// 1 получаем элементы для работы
+let changeImgBtn = document.querySelector("#change-img");
+let worker1Img = document.querySelector(".workers .worker-1 img");
+let worker2Img = document.querySelector(".workers .worker-2 img");
+
+// 2 при клике на кнопку
+changeImgBtn.addEventListener("click", function () {
+  // 3 получаем ссылки на картинки
+  let worker1Src = worker1Img.getAttribute("src");
+  let worker2Src = worker2Img.getAttribute("src");
+
+  let worker1Alt = worker1Img.getAttribute("alt");
+  let worker2Alt = worker2Img.getAttribute("alt");
+  // console.log(worker1Src, worker2Src, worker1Alt, worker2Alt);
+
+  // 4 задать значение атрибутов src
+  worker1Img.setAttribute("src", worker2Src); // картинка для первого работника
+  worker2Img.setAttribute("src", worker1Src); // картинка для второго работника
+
+  worker1Img.setAttribute("alt", worker2Alt); // alt  для первого работника
+  worker2Img.setAttribute("alt", worker1Alt);
+});
+*/
+
+//3
+/*
+let changeImgBtn = document.querySelector("#change-img");
+let worker1Img = document.querySelector(".workers .worker-1 img");
+let worker2Img = document.querySelector(".workers .worker-2 img");
+
+changeImgBtn.addEventListener("click", function () {
+  let worker1Src = worker1Img.getAttribute("src");
+  let worker2Src = worker2Img.getAttribute("src");
+  let worker1Alt = worker1Img.getAttribute("alt");
+  let worker2Alt = worker2Img.getAttribute("alt");
+
+  worker1Img.setAttribute("src", worker2Src);
+  worker2Img.setAttribute("src", worker1Src);
+  worker1Img.setAttribute("alt", worker2Alt);
+  worker2Img.setAttribute("alt", worker1Alt);
+});
+*/
+
+/**
+ * document.createElement - создание элемента
+ */
+/*
+// создаем элемент
+let newAnimalPar = document.createElement("p");
+// console.dir(newAnimalPar);
+
+// добавляем текст в параграф
+newAnimalPar.textContent = "dog";
+
+// добавляем класс
+// newAnimalPar.setAttribute("class", "animal");
+newAnimalPar.classList.add("animal");
+
+// добавить элемент в документ последним потомком div class="animals"
+let animalsContainer = document.querySelector(".animals"); // получаем контейнер для вставки
+animalsContainer.appendChild(newAnimalPar); // вставляем элемент на страницу последним потомком в контейнере
+*/
+
+/**
+ * element.insertAdjacentHTML() - добавляет HTML в указанное место
+ */
+/*
+let myAnimal = "dog";
+let animalsContainer = document.querySelector(".animals"); // получаем контейнер
+let newAnimalPar = `<p class="animal"><span>${myAnimal}</span></p>`; // создаем параграф
+animalsContainer.insertAdjacentHTML("beforeend", newAnimalPar); // добавляем параграф в контейнер последним потомком
+*/
+
+// 2 задание
+//  в элемент <div id="accounts"></div> вставьте заголовок, в котором будет указна строка
+// содержащая приветствие и произвольное имя и фамилию, а также класс
+// должно получиться:
+//<div id="accounts">
+//  <h1 class="account">Привет, Иван Иванов</h1>
+//</div>
+
+//1
+// let newContainer = document.querySelector("#accounts");
+// let helloUsr = '<h1 class="account">Привет, Иван Иванов</h1>';
+// newContainer.insertAdjacentHTML("afterbegin", helloUsr);
+// console.log(newContainer);
+
+//2
+// let newContainer = document.querySelector("#accounts");
+// let helloUsr = '<h1 class="accounts">Привет, Иван Иванов</h1>';
+// newContainer.insertAdjacentHTML("afterbegin", helloUsr);
+// console.log(newContainer);
+
+//3
+// let hi = "Привет, Иван Иванов";
+// let textContainer = document.querySelector("#accounts");
+// let newH1 = `<h1 class="account">${hi}</h1>`;
+// textContainer.insertAdjacentHTML("afterbegin", newH1);
+
+//4
+// let privet = '<h1 class="accounts">Привет, Иван Иванов</h1>';
+// let privetContainer = document.querySelector("#accounts");
+// let newPrivet = `<div class="accounts">${privet}</div>`;
+// privetContainer.insertAdjacentHTML("afterbegin", newPrivet);
+
+//5
+// let newContainer = document.querySelector("#accounts");
+// let helloUsr = '<h1 class="accounts">Привет, Иван Иванов</h1>';
+// newContainer.insertAdjacentHTML("afterbegin", helloUsr);
+// console.log(newContainer);
+
+//6
+// let myHello = "Марина Крылова";
+// let accountConteiner = document.querySelector("#accounts");
+// let newHello = `<h1 class="account">Привет, ${myHello}!</h1>`;
+// accountConteiner.insertAdjacentHTML("beforeend", newHello);
+
+//7
+// document.getElementById("accounts").innerHTML = '<h1 class="account">Привет, Иван Иванов</h1>';
+
+//8
+// document.getElementById("accounts").insertAdjacentHTML("beforeend", '<h1 class="account">Привет, Иван Иванов</h1>');
+
+/**
+ * обработка введенного значения
+ */
+let fNameEl = document.querySelector("#fName"); // инпут
+let fNameError = document.querySelector("#fNameError"); // элемент для ошибки
+
+fNameEl.addEventListener("blur", function () {
+  let value = fNameEl.value;
+  // если пользователь ничего не ввел
+  if (value.length === 0) {
+    // выводим сообщение об ошибке
+    fNameError.textContent = "Это поле должно быть заполнено";
+    fNameEl.style.background = "rgb(250, 199, 199)";
+  } else {
+    fNameError.textContent = "";
+    fNameEl.style.background = "none";
+  }
+});
+
+// дата
+let start = document.querySelector("#start");
+
+start.addEventListener("blur", function () {
+  console.log(start.value);
+});

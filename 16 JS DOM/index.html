@@ -16,6 +16,7 @@
       reiciendis, laudantium natus nulla placeat maiores? Qui alias quia provident, animi ducimus dolore.
     </p>
 
+    <button id="change-img">Поменять картинку</button>
     <div class="workers">
       <div class="worker worker-1">
         <img src="images/user-1.jpg" alt="Иван Иванов" />
@@ -44,10 +45,14 @@
     <h3>Регистрация</h3>
     <form>
       <label>Имя:</label>
-      <input type="text" id="fName" /><br />
+      <input type="text" id="fName" />
+      <span id="fNameError" class="error"></span><br />
 
       <label>Фамилия:</label>
       <input type="text" id="lName" /><br />
+
+      <label for="start">Start date:</label>
+      <input type="date" id="start" />
 
       <input type="submit" id="reg-btn" value="Зарегистрироваться" />
     </form>
@@ -61,6 +66,14 @@
       <p class="animal">ant</p>
     </div>
 
+    <button id="show-user">Пользователь</button>
+    <div id="user">
+      <h2>Silvestr Stallone</h2>
+      <p>Движения по счету: 200, -200, 340, -300, -20, 50, 400, -460</p>
+      <p>Рейтинг: 99</p>
+      <p>ПИН: 9999</p>
+    </div>
+
     <div id="new-animals">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nihil provident corrupti error nemo cupiditate tempora sequi earum quod molestiae vel totam quisquam saepe explicabo eum
@@ -69,6 +82,10 @@
     </div>
 
     <div class="users"></div>
+
+    <div id="accounts">
+      <h1 class="account">Привет, Марина Крылова</h1>
+    </div>
 
     <script src="script.js"></script>
   </body>

@@ -1,0 +1,37 @@
+/* посты */
+.posts, .countries {
+    max-width: 1200px;
+    background-color: aliceblue;
+    margin: 20px auto;
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 40px;
+}
+
+.posts .post {
+    padding: 10px;
+    background-color: rgb(216, 234, 250);
+}
+
+.posts .post h2 {
+    text-align: center;
+}
+
+/* страны */
+.countries .country {
+    padding: 20px;
+    background-color: rgb(217, 224, 230);
+    border-radius: 10px;
+}
+
+.countries .country .country-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.countries .country .country-images img {
+    width: 45%;
+    border: 2px solid rgb(232, 231, 231);
+}

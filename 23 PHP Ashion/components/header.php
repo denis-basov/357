@@ -6,7 +6,7 @@
     <meta name="keywords" content="Ashion, unica, creative, html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><?=$title ?? 'Ashion | Template'?></title>
+    <title><?=$title ?? 'Ashion'?></title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" />
@@ -74,18 +74,18 @@
                         <li class="active"><a href="index.php">Home</a></li>
                         <li><a href="#">Women’s</a></li>
                         <li><a href="#">Men’s</a></li>
-                        <li><a href="./shop.html">Shop</a></li>
+                        <li><a href="./shop.php">Shop</a></li>
                         <li>
                             <a href="#">Pages</a>
                             <ul class="dropdown">
-                                <li><a href="./product-details.html">Product Details</a></li>
-                                <li><a href="./shop-cart.html">Shop Cart</a></li>
-                                <li><a href="./checkout.html">Checkout</a></li>
-                                <li><a href="./blog-details.html">Blog Details</a></li>
+                                <li><a href="./product-details.php">Product Details</a></li>
+                                <li><a href="./shop-cart.php">Shop Cart</a></li>
+                                <li><a href="./checkout.php">Checkout</a></li>
+                                <li><a href="./blog-details.php">Blog Details</a></li>
                             </ul>
                         </li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./blog.php">Blog</a></li>
+                        <li><a href="./contact.php">Contact</a></li>
                     </ul>
                 </nav>
             </div>

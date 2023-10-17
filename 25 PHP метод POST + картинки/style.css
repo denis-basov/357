@@ -1,0 +1,28 @@
+.reg-form{
+    background-color: aliceblue;
+    padding: 20px;
+    border: 2px solid #fff2e2;
+}
+
+.reg-form .form-input{
+    margin-top: 10px;
+    background-color: #e2f8ff;
+    padding: 10px;
+}
+
+.user-info{
+    background-color: oldlace;
+    padding: 30px;
+    border: 3px solid #b3c7b3;
+}
+
+.user-info span{
+    color: brown;
+    font-weight: bold;
+}
+
+.user-info img{
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+}

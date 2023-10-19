@@ -1,0 +1,18 @@
+form{
+    background-color: oldlace;
+    border: 2px solid #dcd1bb;
+    padding: 30px;
+    max-width: 500px;
+    font-size: 30px;
+}
+
+form div{
+    margin-bottom: 7px;
+}
+
+.user-input{
+    background-color: darkseagreen;
+    font-size: 20px;
+    line-height: 30px;
+    /*height: 20px;*/
+}

@@ -17,8 +17,8 @@
             $lastName = htmlspecialchars(trim($_POST['lastName']));
 
             // сохраняем введенные данные на ПК клиента в файлах cookie
-            setcookie('firstName', $firstName, time()+60);
-            setcookie('lastName', $lastName, time()+60);
+            setcookie('firstName', $firstName, time()+ 60*60);
+            setcookie('lastName', $lastName, time()+ 60*60);
 
             // перенаправляем клиента в лк
             header('Location: cabinet.php');

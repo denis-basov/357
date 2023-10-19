@@ -1,0 +1,111 @@
+/* файл для медиазапросов */
+
+/* для ширины экрана не более 1200п */
+@media(max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .top-pics {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+}
+
+/* для ширины экрана не более 1000п */
+@media(max-width:1000px) {
+    html {
+        font-size: 50%;
+    }
+
+    .top-pics {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .top-pics p {
+        margin-bottom: 2rem;
+    }
+
+    .view {
+        margin-top: 5rem;
+    }
+}
+
+/* для ширины экрана не более 800п */
+@media(max-width:800px) {
+    html {
+        font-size: 45%;
+    }
+
+    .shop-items {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .top-pics p {
+        margin-bottom: 0;
+    }
+
+    .view {
+        margin-top: 2rem;
+    }
+}
+
+/* для ширины экрана не более 700п */
+@media(max-width:700px) {
+    html {
+        font-size: 40%;
+    }
+
+    .shop-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 0;
+    }
+
+    .shop-items .shop-item {
+        width: 70%;
+    }
+
+    /* .shop-items {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .shop-items .shop-item {
+        width: 40%;
+    } */
+}
+
+/* для ширины экрана не более 550п */
+@media(max-width:550px) {
+    html {
+        font-size: 35%;
+    }
+}
+
+/* для ширины экрана не более 450п */
+@media(max-width:450px) {
+    html {
+        font-size: 30%;
+    }
+
+    .top-pics p {
+        margin: 0 5rem;
+    }
+}
+
+/* для ширины экрана не более 30п */
+@media(max-width:300px) {
+    html {
+        font-size: 35%;
+    }
+
+    .shop-items {
+        grid-template-columns: 1fr;
+    }
+}

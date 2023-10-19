@@ -1,0 +1,109 @@
+/*
+ max-width
+ %, fr, em, rem
+ flex, grid
+
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+1rem = 16px
+2rem = 32px
+*/
+html {
+    font-family: 'Poppins', sans-serif;
+    /* базовый размер шрифта - по умолчанию 16п = 100% */
+    /* 16px = 100% */
+    /* 10px = 62,5% */
+    font-size: 62.5%;
+}
+
+.top-pics {
+    max-width: 144rem;
+    margin: auto;
+    padding: 5.5rem 12.3rem;
+}
+
+.top-pics h2 {
+    text-align: center;
+    color: #000;
+    font-family: Poppins;
+    /* font-size: 36px; */
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 1.3rem;
+}
+
+.top-pics p {
+    text-align: center;
+    color: #9F9F9F;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5.5rem;
+}
+
+.shop-items {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.shop-items .shop-item {
+    width: 25%;
+}
+
+.shop-items .shop-item img {
+    width: 100%;
+}
+
+.shop-items .shop-item p {
+    color: #000;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin: 1.5rem;
+}
+
+.shop-items .shop-item h3 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1rem 0 0 1.5rem;
+}
+
+.view {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.view-more {
+    display: inline-block;
+    text-align: center;
+    color: #000;
+    font-family: Poppins;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    border-bottom: 0.2rem solid #000;
+    padding-bottom: 1.9rem;
+}

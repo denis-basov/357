@@ -1,0 +1,16 @@
+.cars{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: oldlace;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cars .car{
+    border: 2px solid #fcf2cb;
+    border-radius: 10px;
+    padding: 15px;
+}

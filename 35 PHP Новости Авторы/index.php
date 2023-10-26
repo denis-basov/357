@@ -11,5 +11,6 @@
     <h1>Мой блог</h1>
     <a href="news.php">Новости</a>
     <a href="authors.php">Авторы</a>
+    <a href="/">На главную</a>
 </body>
 </html>

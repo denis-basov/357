@@ -30,7 +30,8 @@
     color: orange;
 }
 
-.authors-show{
+.authors-show,
+.authors-delete{
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
@@ -42,12 +43,14 @@
     gap: 50px;
 }
 
-.authors-show .author{
+.authors-show .author,
+.authors-delete .author{
     background-color: #d9f2fe;
     padding: 20px;
 }
 
-.authors-show .author img{
+.authors-show .author img,
+.authors-delete .author img{
     width: 100%;
 }
 
@@ -66,4 +69,13 @@
 .add-author .input-data .biography{
     width: 100%;
     height: 200px;
+}
+
+.error-msg{
+    color: red;
+    border: 2px solid red;
+}
+
+.authors-delete{
+    grid-template-columns: repeat(4, 1fr);
 }

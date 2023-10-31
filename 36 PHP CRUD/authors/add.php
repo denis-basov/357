@@ -11,22 +11,49 @@
 
 
     if($_SERVER['REQUEST_METHOD'] === 'POST'){ // если отправлена форма
+
         // подключение к БД
         require '../DBConnect.php';
         $pdo = DBConnect::getConnection();
 
-        DBConnect::debug($_POST);
-        DBConnect::debug($_FILES);
+//        DBConnect::debug($_POST);
+//        DBConnect::debug($_FILES);
 
         // получаем аватар
         $avatar = $_FILES['avatar'];
 
         // проверяем на пустые поля
-        if(!empty($_POST['firstName'])){
-            // если НЕ пусто, продолжаем
+        if( !empty($_POST['firstName'])
+            && !empty($_POST['lastName'])
+            && !empty($_POST['shortInfo'])
+            && !empty($_POST['biography'])
+            && $avatar['size'] ){// если НЕ пусто, продолжаем
+
+            // экранируем введенные данные
+            $firstName = htmlspecialchars(trim($_POST['firstName']));
+            $lastName = htmlspecialchars(trim($_POST['lastName']));
+            $shortInfo = htmlspecialchars(trim($_POST['shortInfo']));
+            $biography = htmlspecialchars(trim($_POST['biography']));
+
+            // формируем путь к картинке, куда будем загружать
+            $avatarPath = '/template/images/authors/'.time().'_'.$avatar['name'];
+
+            // перемещаем картинку в нужную папку
+            move_uploaded_file($avatar['tmp_name'], "..$avatarPath");
+
+            // записываем данные об авторе в БД
+            $query = "INSERT INTO authors
+                        VALUES(?, ?, ?, ?, ?, ?);";
+            $statement = $pdo->prepare($query);// подготавливаем
+            $statement->execute([null, $firstName, $lastName, $shortInfo, $biography, $avatarPath]);// выполняем
+
+            // перенаправить админа куда-то
+            header('Location: /authors/show.php');
+            die();
+
+        }else{ // если хотя бы одно поле не заполнено, выводим сообщение об ошибке
+            $errorMsg =  "<h2 class='error-msg'>Заполните все поля</h2>";
         }
-
-
     }
 ?>
 <!doctype html>
@@ -76,5 +103,9 @@
         </div>
 
     </form>
+
+    <div>
+        <?=$errorMsg ?? ''?>
+    </div>
 </body>
 </html>

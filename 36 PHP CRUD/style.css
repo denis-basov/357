@@ -9,7 +9,8 @@
     gap: 20px;
 }
 
-.authors-nav{
+.authors-nav,
+.news-nav{
     max-width: 500px;
     background-color: aliceblue;
     padding: 20px;
@@ -19,14 +20,16 @@
     gap: 10px;
 }
 
-.authors-nav a{
+.authors-nav a,
+.news-nav a{
     color: indigo;
     text-decoration: none;
     font-family: Verdana, sans-serif;
     transition: all 0.3s;
 }
 
-.authors-nav a:hover{
+.authors-nav a:hover,
+.news-nav a:hover{
     color: orange;
 }
 
@@ -56,13 +59,18 @@
 
 .add-author{
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 30px;
     background-color: aliceblue;
+    border: 3px solid #b2eafc;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+}
+
+.add-author .input-data{
+    margin-bottom: 20px;
 }
 
 .add-author .input-data .short-info,
@@ -78,4 +86,25 @@
 
 .authors-delete{
     grid-template-columns: repeat(4, 1fr);
+}
+
+.myButton {
+    background-color:#44c767;
+    border-radius:28px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding: 8px 16px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+    background-color:#5cbf2a;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
 }

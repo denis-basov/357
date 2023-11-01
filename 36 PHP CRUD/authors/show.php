@@ -14,7 +14,8 @@
     $pdo = DBConnect::getConnection();
 
     $query = "SELECT id, first_name, last_name, short_info, biography, avatar
-              FROM authors;";
+              FROM authors
+              ORDER BY id DESC;";
     $statement = $pdo->query($query);
     $authors = $statement->fetchAll();
     //DBConnect::debug($authors);

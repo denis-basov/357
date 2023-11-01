@@ -22,6 +22,10 @@
             <a href="authors/edit.php">Отредактировать автора</a>
             <a href="exit.php">Выйти</a>
         </nav>
+
+        <nav class="news-nav">
+            <a href="news/add.php">Добавить новость</a>
+        </nav>
     <?php else:?>
         <?php header('Location: /'); die();?>
     <?php endif;?>

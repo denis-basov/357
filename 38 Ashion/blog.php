@@ -1,4 +1,11 @@
 <?php
-    $title = 'Блог';
+// контроллер страницы списка новостей (блога)
 
-    require 'views/blog_view.php';
+$title = 'Блог';
+require 'models/News.php';
+
+// получаем все новости из БД
+$newsList = News::getNewsList();
+//DBConnect::debug($newsList);
+
+require 'views/blog_view.php';

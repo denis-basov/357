@@ -2769,7 +2769,7 @@ ol {
 }
 
 .blog__details__item__title .tip {
-	font-size: 12px;
+	font-size: 16px;
 	color: #ffffff;
 	background: #ca1515;
 	text-transform: uppercase;
@@ -2781,7 +2781,7 @@ ol {
 
 .blog__details__item__title h4 {
 	color: #111111;
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 39px;
 	margin-top: 10px;
 	margin-bottom: 5px;
@@ -2917,7 +2917,7 @@ ol {
 
 .blog__details__comment h5 {
 	color: #111111;
-	font-weight: 600;
+	font-weight: 500;
 	text-transform: uppercase;
 	margin-bottom: 35px;
 }
@@ -2961,6 +2961,7 @@ ol {
 
 .blog__comment__item__pic img {
 	border-radius: 50%;
+	width: 100px;
 }
 
 .blog__comment__item__text {

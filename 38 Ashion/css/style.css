@@ -3143,6 +3143,11 @@ ol {
 	color: #444444;
 }
 
+.contact__form .input-error{
+	color: red;
+	font-weight: 600;
+}
+
 .contact__map {
 	height: 780px;
 }

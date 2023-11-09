@@ -8,13 +8,21 @@ require 'core/SignUp.php'; // класс для проверки и сохран
 // если отправлена форма регистрации
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-    $result = SignUp::validateForm();
+    list($errors, $input) = SignUp::validateForm();
+
+    DBConnect::debug($input);
+    DBConnect::debug($errors);
 
     // если ошибки есть
+    if($errors){
         // показываем форму снова, прописывая в ней данные и тексты ошибок
-    // если ошибок нет
+        require 'views/registration_view.php';
+    }else{// если ошибок нет
         // сохраняем данные
+        SignUp::processForm($input);
+    }
+
+}else{
+    require 'views/registration_view.php';
 }
 
-
-require 'views/registration_view.php';

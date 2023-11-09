@@ -3148,6 +3148,12 @@ ol {
 	font-weight: 600;
 }
 
+.contact__form .border-error{
+	border: 1px solid red;
+	background-color: #f1dede;
+}
+
+
 .contact__map {
 	height: 780px;
 }

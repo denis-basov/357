@@ -15,24 +15,44 @@ require 'components/header.php';
 
                         <form method="POST" enctype="multipart/form-data">
 
-                            <span class="input-error"></span>
-                            <input type="text" name="firstName" placeholder="Имя">
+                            <span class="input-error"><?=$errors['firstName'] ?? ''?></span>
+                            <input type="text"
+                                   <?php echo isset($errors['firstName']) ? 'class="border-error"' : '' ?>
+                                   name="firstName"
+                                   placeholder="Имя"
+                                   value="<?=$input['firstName'] ?? ''?>">
 
-                            <span class="input-error"></span>
-                            <input type="text" name="lastName" placeholder="Фамилия">
+                            <span class="input-error"><?=$errors['lastName'] ?? ''?></span>
+                            <input type="text"
+                                   <?php echo isset($errors['lastName']) ? 'class="border-error"' : '' ?>
+                                   name="lastName" placeholder="Фамилия"
+                                   value="<?=$input['lastName'] ?? ''?>">
 
-                            <span class="input-error"></span>
-                            <input type="text" name="login" placeholder="Логин">
+                            <span class="input-error"><?=$errors['login'] ?? ''?></span>
+                            <input type="text"
+                                   <?php echo isset($errors['login']) ? 'class="border-error"' : '' ?>
+                                   name="login" placeholder="Логин"
+                                   value="<?=$input['login'] ?? ''?>">
 
-                            <span class="input-error"></span>
-                            <input type="text" name="email" placeholder="Электронный адрес">
+                            <span class="input-error"><?=$errors['email'] ?? ''?></span>
+                            <input type="text"
+                                   <?php echo isset($errors['email']) ? 'class="border-error"' : '' ?>
+                                   name="email" placeholder="Электронный адрес"
+                                   value="<?=$input['email'] ?? ''?>">
 
-                            <span class="input-error"></span>
-                            <input type="password" name="password" placeholder="Пароль">
+                            <div>
+                                <span class="input-error"><?=$errors['password'] ?? ''?></span>
+                                <input type="password"
+                                    <?php echo isset($errors['password']) ? 'class="border-error"' : '' ?>
+                                       name="password" placeholder="Пароль"
+                                       value="<?=$input['password'] ?? ''?>">
+                                <button class="mb-3" id="show-password">Показать пароль</button>
+                            </div>
 
-                            <span class="input-error"></span>
                             <label>Аватар:</label>
-                            <input type="file" name="avatar" value="аватар">
+                            <span class="input-error"><?=$errors['avatar'] ?? ''?></span>
+                            <input type="file" name="avatar"
+                                <?php echo isset($errors['avatar']) ? 'class="border-error"' : '' ?>>
 
                             <button type="submit" class="site-btn">Зарегистрироваться</button>
                         </form>

@@ -1,3 +1,6 @@
+/**
+ * получение и отображение списка новостей
+ */
 (function () {
 
     let newsContainer = document.querySelector('.news-container');// контейнер для вывода новостей
@@ -58,6 +61,36 @@
         start += limit;// делаем отступ на кол-во новостей в запросе
 
         getPosts();// получаем и отображаем новые посты
+    });
+
+})();
+
+/**
+ * показ пароля при нажатии на кнопку
+ */
+(function () {
+    // получаем кнопку
+    let showPasswordBtn = document.querySelector('#show-password');
+
+    // если кнопки в документе нет, выходим
+    if(!showPasswordBtn) return;
+
+    // получаем поле с паролем
+    let passwordInput = showPasswordBtn.previousElementSibling;
+
+    showPasswordBtn.addEventListener('click', function(event){
+        event.preventDefault();// отменяем отправку формы
+
+        // если тип - пароль
+        if(passwordInput.type === 'password'){
+            // меняем на текст
+            passwordInput.type = 'text';
+            showPasswordBtn.textContent = 'Скрыть пароль';
+        }else{// иначе
+            // меняем обратно на пароль
+            passwordInput.type = 'password';
+            showPasswordBtn.textContent = 'Показать пароль';
+        }
     });
 
 })();

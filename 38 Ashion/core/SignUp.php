@@ -191,9 +191,24 @@ class SignUp
      * метод для сохранения данных в БД
      */
     public static function processForm($input){
-        // сохранение данных в БД
-        
+        // сохраняем картинку
+        $input['avatar'] = self::saveImage($input['avatar']);
 
+        // шифрование пароля
+        $input['password'] = password_hash($input['password'], PASSWORD_DEFAULT);
+
+        // сохранение данных в БД
+        $input['userId'] =  Users::addNewUser($input);
+
+        // начинаем сесию и записываем в нее данные
+        session_start();
+        $_SESSION['userId'] = $input['userId'];
+        $_SESSION['login'] = $input['login'];
+        $_SESSION['firstName'] = $input['firstName'];
+        $_SESSION['avatar'] = $input['avatar'];
+
+        // переносим на главную
+        header('Location: /');
     }
 
 }

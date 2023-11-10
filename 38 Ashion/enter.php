@@ -1,6 +1,62 @@
 <?php
 // контроллер страницы входа
 
+$title = 'Вход';
+require 'models/Users.php';
+require 'core/SignIn.php';
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+    list($errors, $input) = SignIn::validateForm();
+
+    // если ошибки есть
+    if($errors){
+        // показываем форму снова, прописывая в ней данные и тексты ошибок
+        require 'views/enter_view.php';
+    }else{// если ошибок нет
+        // пускаем пользователя в доверенную зону
+        SignIn::processForm($input);
+
+    }
+
+}else{
+    require 'views/enter_view.php';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * регулярные выражения
  *
@@ -17,6 +73,7 @@
  *  {n} - предыдущий символ должен повторяться n раз
  *  . - любой символ
  */
+/*
 $regExp = "/^.+@.+\..+$/iu";
 $str = "test@test.ru";
 
@@ -24,4 +81,13 @@ if(preg_match($regExp, $str)){
     echo 'Строка соответствует регулярному выражению';
 }else{
     echo 'Строка НЕ соответствует регулярному выражению';
-}
+}*/
+
+
+/*
+// шифрование пароля
+$password = '123456789';
+$hash = password_hash($password, PASSWORD_DEFAULT);
+echo $hash;
+echo '<hr>';
+var_dump( password_verify($password, $hash) );*/

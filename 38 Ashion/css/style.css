@@ -438,6 +438,11 @@ ol {
 	margin-right: 25px;
 }
 
+.header__right__auth img{
+	width: 40px;
+	border-radius: 50%;
+}
+
 .header__right__auth a {
 	font-size: 12px;
 	color: #666666;

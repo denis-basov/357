@@ -63,7 +63,12 @@ require 'components/header.php';
                     <!-- comments   -->
                     <div class="blog__details__comment">
                         <h5>Комментариев: <?=$commentsCount?></h5>
-                        <a href="#" class="leave-btn">Оставить комментарий</a>
+
+                        <?php if( isset($_SESSION['userId']) ):?>
+                            <a href="#" class="leave-btn">Оставить комментарий</a>
+                        <?php else:?>
+                            <a href="enter.php" class="leave-btn">Для добавления комментария авторизуйтесь</a>
+                        <?php endif;?>
 
                         <?php foreach ($comments as $comment):?>
                         <div class="blog__comment__item mb-5">

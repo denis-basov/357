@@ -10,8 +10,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     list($errors, $input) = SignUp::validateForm();
 
-    DBConnect::debug($input);
-    DBConnect::debug($errors);
+//    DBConnect::debug($input);
+//    DBConnect::debug($errors);
 
     // если ошибки есть
     if($errors){

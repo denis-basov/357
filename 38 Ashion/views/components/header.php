@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    echo '<h4>';
+    print_r($_SESSION);
+    echo '</h4>';
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -93,8 +99,18 @@
             <div class="col-lg-3">
                 <div class="header__right">
                     <div class="header__right__auth">
-                        <a href="enter.php">Login</a>
-                        <a href="registration.php">Register</a>
+                        <!-- если клиент авторизован   -->
+                        <?php if( isset($_SESSION['userId']) ):?>
+                            <!-- показываем ссылку на лк, выход  -->
+                            <a href="cabinet.php">
+                                <img src="<?=$_SESSION['avatar']?>" alt="<?=$_SESSION['login']?>">
+                            </a>
+                            <a href="cabinet.php"><?=$_SESSION['firstName']?></a>
+                            <a href="core/exit.php">Выход</a>
+                        <?php else:?>
+                            <a href="enter.php">Вход</a>
+                            <a href="registration.php">Регистрация</a>
+                        <?php endif;?>
                     </div>
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>

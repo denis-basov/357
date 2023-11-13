@@ -18,8 +18,9 @@ require 'components/header.php';
                             <label>Введите адрес электронной почты:</label>
                             <span class="input-error"><?=$emailError ?? ''?></span>
                             <input type="text"
-                                <?php echo isset($errors['login']) ? 'class="border-error"' : '' ?>
-                                   name="email" placeholder="example@test.com">
+                                <?php echo isset($emailError) ? 'class="border-error"' : '' ?>
+                                   name="email" placeholder="example@test.com"
+                                   value="<?=$email ?? ''?>">
 
                             <button type="submit" class="site-btn">Восстановить</button>
                         </form>

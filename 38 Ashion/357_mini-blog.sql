@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 01 2023 г., 17:01
+-- Время создания: Ноя 13 2023 г., 12:52
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -216,11 +216,14 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `login`, `first_name`, `last_name`, `email`, `password`, `image`, `add_date`, `update_date`, `favourite`) VALUES
 (1, 'Ivan', 'Иван', 'Иванов', 'Ivan@test.ru', '$2y$10$We2kU6ETemFutmLYdqZKiuDx2sj5rYf4H3hhBRCi.RtfkbJQSh4ti', '/template/images/users/user-2.jpg', '2022-11-30 10:35:23', '2023-09-12 10:17:47', NULL),
-(2, 'irina', 'Ирина', 'Иванова', 'irina@test.ru', '$2y$10$wJusKRWF7yCWzM3BSB2U5uxNx1T4xLIrdTT82Uqd41OA8rEI4030y', '/template/images/users/user-1.jpg', '2022-12-01 09:39:48', '2023-09-12 10:17:47', NULL),
-(4, 'dergeu111', 'Сергей', 'Сидоров', 'dergeu111@test.tt', '$2y$10$4rX/6LmuzJr5s/paeV6TI.Uv7sAXCkYw07vItzjxh8Ov6fqryoY9a', 'template/images/users/1695364051_ethan-hoover-0YHIlxeCuhg-unsplash (1).jpg', '2023-09-22 06:27:31', '2023-09-22 06:27:31', NULL),
-(5, 'sergeevPavel555', 'Павел', 'Сергеев', 'sergeevPavel@test.rr', '$2y$10$fXYWzuX.yB8HnMes2db4kueM1b/EQo5kxIKAQZdmaRVGt9WHh4oyO', 'template/images/users/1695375111_cam-adams-imBSxksI7DA-unsplash (1).jpg', '2023-09-22 09:31:51', '2023-09-22 09:31:51', NULL),
-(6, 'aleksPetrov', 'Алексей', 'Петров', 'aleksPetrov@test.ru', '$2y$10$U2m5tVnlJyOgTqaKxzeE7esgnSPippqj1pzO4tJxGotJVSLLS1LJS', 'template/images/users/1695706997_albert-dera-ILip77SbmOE-unsplash.jpg', '2023-09-26 05:43:17', '2023-09-26 05:43:17', NULL),
-(7, 'tatyanaIvanova', 'Иван', 'Петров', 'IvanPetrov@test.rt', '$2y$10$eXVNuH7Q47ChMV0SkMfb5em5NUOWVXHzB6wzXJPaptS3Y5zVYsixe', 'template/images/users/1695793956_christopher-campbell-rDEOVtE7vOs-unsplash (2).jpg', '2023-09-27 05:52:36', '2023-09-27 05:52:36', '[3,6,16,24,12,56]');
+(2, 'irina', 'Ирина', 'Иванова', 'irina@test.ru', '$2y$10$wJusKRWF7yCWzM3BSB2U5uxNx1T4xLIrdTT82Uqd41OA8rEI4030y', '/template/images/users/default.jpg', '2022-12-01 09:39:48', '2023-09-12 10:17:47', NULL),
+(4, 'dergeu111', 'Сергей', 'Сидоров', 'dergeu111@test.tt', '$2y$10$4rX/6LmuzJr5s/paeV6TI.Uv7sAXCkYw07vItzjxh8Ov6fqryoY9a', 'template/images/users/default.jpg', '2023-09-22 06:27:31', '2023-09-22 06:27:31', NULL),
+(5, 'sergeevPavel555', 'Павел', 'Сергеев', 'sergeevPavel@test.rr', '$2y$10$fXYWzuX.yB8HnMes2db4kueM1b/EQo5kxIKAQZdmaRVGt9WHh4oyO', 'template/images/users/default.jpg', '2023-09-22 09:31:51', '2023-09-22 09:31:51', NULL),
+(6, 'aleksPetrov', 'Алексей', 'Петров', 'aleksPetrov@test.ru', '$2y$10$U2m5tVnlJyOgTqaKxzeE7esgnSPippqj1pzO4tJxGotJVSLLS1LJS', 'template/images/users/default.jpg', '2023-09-26 05:43:17', '2023-09-26 05:43:17', NULL),
+(7, 'tatyanaIvanova', 'Иван', 'Петров', 'IvanPetrov@test.rt', '$2y$10$eXVNuH7Q47ChMV0SkMfb5em5NUOWVXHzB6wzXJPaptS3Y5zVYsixe', 'template/images/users/default.jpg', '2023-09-27 05:52:36', '2023-09-27 05:52:36', '[3,6,16,24,12,56]'),
+(8, 'pavlov111', 'Иван', 'Павлов', 'pavlov111@test.ru', '$2y$10$2rTJ.0FT/TPL/oG/olWNsOXvWiYDFPVfvVdcZTLyd3KIGMXGf/9..', 'template/images/users/1699618889_avatar.jpg', '2023-11-10 12:21:29', '2023-11-10 12:21:29', NULL),
+(10, 'petrova111', 'Светлана', 'Петрова', 'petrova111@test.ee', '$2y$10$e8xDNv/F6Pqfo2V3X4Qcn.h2iq5NddMbwEpPDvmgEgd5nqJNLQaIy', 'template/images/users/1699621601_stefan-stefancik-QXevDflbl8A-unsplash.jpg', '2023-11-10 13:06:41', '2023-11-10 13:06:41', NULL),
+(11, 'LuisVillasmil', 'Луис', 'Вилласмил', 'LuisVillasmil@test.ee', '$2y$10$efxd/XG.y1y6lNUyCMSJbuZUP3OHDqwVF50AGJz83hRWVho4/1xYS', 'template/images/users/1699628753_luis-villasmil-hh3ViD0r0Rc-unsplash.jpg', '2023-11-10 15:05:53', '2023-11-10 15:05:53', NULL);
 
 --
 -- Индексы сохранённых таблиц
@@ -316,7 +319,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

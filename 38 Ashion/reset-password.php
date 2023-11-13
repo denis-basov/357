@@ -16,11 +16,28 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $emailError = 'Указанный адрес не зарегистрирован';
         require 'views/reset-password_view.php';
     }else{
+        /**
+         * генерирование пароля
+         */
+        // начальная строка из которой будем формировать пароль
+        $passwordInit = 'qwertyuiopasdfghjklzxcvbnm0123456789QWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*';
+        // перемешиваем символы в строке
+        $password = str_shuffle($passwordInit);
+        // получаем первые 6 символов строки
+        $password = substr($password, 0, 6);
+
+
         // отправляем пароль на почту
+
     }
 
 }else{
     require 'views/reset-password_view.php';
 }
 
-
+/*
+Имя: f0727777_ashion
+Пользователь: f0727777_admin
+Пароль: 123456789
+Адрес хоста: localhost
+*/

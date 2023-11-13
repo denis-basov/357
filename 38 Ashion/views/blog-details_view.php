@@ -49,12 +49,12 @@ require 'components/header.php';
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="blog__details__btn__item">
-                                    <h6><a href="#"><i class="fa fa-angle-left"></i> Previous posts</a></h6>
+                                    <h6><a href="blog-details.php?newsId=<?=$previousNewsId?>"><i class="fa fa-angle-left"></i> Предыдущий пост</a></h6>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="blog__details__btn__item blog__details__btn__item--next">
-                                    <h6><a href="#">Next posts <i class="fa fa-angle-right"></i></a></h6>
+                                    <h6><a href="blog-details.php?newsId=<?=$nextNewsId?>">Следующий пост <i class="fa fa-angle-right"></i></a></h6>
                                 </div>
                             </div>
                         </div>

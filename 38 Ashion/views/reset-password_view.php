@@ -13,18 +13,23 @@ require 'components/header.php';
                     <div class="contact__form">
                         <h5>Восстановление пароля</h5>
 
-                        <form method="POST">
+                        <!-- если пароль отправлен на почту  -->
+                        <?php if( isset($_GET['reset']) && $_GET['reset'] === 'success'):?>
+                            <p>Пароль отправлен на указанную электронную почту</p>
+                            <h3>Для входа на сайт пройдите по <a href="enter.php">ссылке.</a></h3>
+                        <?php else: ?>
+                            <form method="POST">
 
-                            <label>Введите адрес электронной почты:</label>
-                            <span class="input-error"><?=$emailError ?? ''?></span>
-                            <input type="text"
-                                <?php echo isset($emailError) ? 'class="border-error"' : '' ?>
-                                   name="email" placeholder="example@test.com"
-                                   value="<?=$email ?? ''?>">
+                                <label>Введите адрес электронной почты:</label>
+                                <span class="input-error"><?=$emailError ?? ''?></span>
+                                <input type="text"
+                                    <?php echo isset($emailError) ? 'class="border-error"' : '' ?>
+                                       name="email" placeholder="example@test.com"
+                                       value="<?=$email ?? ''?>">
 
-                            <button type="submit" class="site-btn">Восстановить</button>
-                        </form>
-
+                                <button type="submit" class="site-btn">Восстановить</button>
+                            </form>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

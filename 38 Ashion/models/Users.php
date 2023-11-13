@@ -80,5 +80,31 @@ class Users
     }
 
 
+    /**
+     * метод для обновления пароля в БД
+     */
+    public static function updatePassword($email, $hash){
+        $pdo = DBConnect::getConnection();
+
+        $query = "UPDATE users
+                    SET password = ?
+                    WHERE email = ?;";
+        $statement = $pdo->prepare($query);
+        $statement->execute([$hash, $email]);
+    }
+
+    /**
+     * метод для получения данных о пользователе по ID
+     */
+    public static function getUserInfoById($id){
+        $pdo = DBConnect::getConnection();
+
+        $query = "SELECT * 
+                    FROM users
+                    WHERE id = ?";
+        $statement = $pdo->prepare($query);
+        $statement->execute([$id]);
+        return $statement->fetch();
+    }
 
 }

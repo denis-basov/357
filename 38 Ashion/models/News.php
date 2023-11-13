@@ -71,4 +71,16 @@ class News
         $statement->execute([$id]);
         return $statement->fetch();
     }
+
+    /**
+     * получение списка ID
+     */
+    public static function getIdList(){
+        $pdo = DBConnect::getConnection();
+
+        $query = "SELECT id
+                    FROM news
+                    ORDER BY id;";
+        return $pdo->query($query)->fetchAll();
+    }
 }

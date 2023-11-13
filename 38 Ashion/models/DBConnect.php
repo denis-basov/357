@@ -10,10 +10,10 @@
 
 class DBConnect{
     // статические свойства для подключения к БД
-    private static $dbName = '357_mini-blog';
+    private static $dbName = 'f0727777_ashion';
     private static $dbHost = 'localhost';
-    private static $dbLogin = 'root';
-    private static $dbPassword = '';
+    private static $dbLogin = 'f0727777_admin';
+    private static $dbPassword = '123456789';
 
     // метод для получения объекта соединения с БД
     public static function getConnection(){
